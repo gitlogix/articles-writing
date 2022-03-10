@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    div.container-fluid
+        h1 #{article.title}
+        small written by #{article.author}
+        div 
+            p #{article.description}
+            div.container-fluid
+                a.btn.btn-primary(href="/article/edit/"+article._id) Edit 
+                a.btn.btn-danger(href="/article/delete/"+article._id) Delete     

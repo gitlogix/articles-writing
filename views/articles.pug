@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+    h1 #{post}
+    ul.list-group
+        each article, i in articles
+            li.list-group-item
+                a(href="/article/"+article._id, title="title").col-lg-9= article.title
+                a(href="#", title="delete button", "data-id"=article._id).col-lg-9.delete_article X
